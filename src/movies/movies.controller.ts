@@ -6,6 +6,8 @@ import {
   Param,
   Patch,
   Post,
+  Req,
+  Res,
 } from '@nestjs/common';
 import { CreateMovieDto } from './dto/create-movie.dto';
 import { UpdateMovieDto } from './dto/update-movie.dto';
@@ -18,6 +20,8 @@ export class MoviesController {
 
   @Get()
   getAll(): Movie[] {
+    //@Req() req, @Res() res
+    // console.log(req, res);
     return this.moviesService.getAll();
   }
 
